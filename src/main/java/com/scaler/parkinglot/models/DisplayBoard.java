@@ -1,4 +1,9 @@
 package com.scaler.parkinglot.models;
 
-public class DisplayBoard {
+import lombok.Getter;
+import lombok.experimental.SuperBuilder;
+
+@SuperBuilder
+@Getter
+public class DisplayBoard extends BaseModel {
 }

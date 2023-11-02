@@ -1,11 +1,13 @@
 package com.scaler.parkinglot.models;
 
+import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
-public class Spot extends BaseModel {
-    private long spotId;
-    private long floorId;
+@Getter
+public class ParkingSpot extends BaseModel {
+    private Long spotId;
+    private Long floorId;
     private VehicleType type;
     private SpotStatus status;
 }

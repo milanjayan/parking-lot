@@ -1,5 +1,10 @@
 package com.scaler.parkinglot.models;
 
-public class PaymentBooth {
-    private int number;
+import lombok.Getter;
+import lombok.experimental.SuperBuilder;
+
+@SuperBuilder
+@Getter
+public class PaymentBooth extends BaseModel {
+    private Long boothId;
 }

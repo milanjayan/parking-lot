@@ -1,6 +1,11 @@
 package com.scaler.parkinglot.models;
 
-public abstract class Gate {
-    private int number;
+import lombok.Getter;
+import lombok.experimental.SuperBuilder;
+
+@SuperBuilder
+@Getter
+public abstract class Gate extends BaseModel {
+    private Long gateId;
     private Operator operator;
 }
