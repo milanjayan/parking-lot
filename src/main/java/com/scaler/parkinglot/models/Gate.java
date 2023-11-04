@@ -7,5 +7,5 @@ import lombok.experimental.SuperBuilder;
 @Getter
 public abstract class Gate extends BaseModel {
     private Long gateId;
-    private Operator operator;
+    private ParkingOperator operator;
 }

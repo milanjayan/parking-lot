@@ -1,14 +1,17 @@
 package com.scaler.parkinglot.models;
 
 import lombok.Getter;
+import lombok.experimental.SuperBuilder;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
-public class Payment {
-    private Date time;
+@SuperBuilder
+public class Payment extends BaseModel {
+    private LocalDateTime time;
     private Double amount;
-    private Ticket ticket;
+    private Long ticketId;
     private PaymentMode mode;
     private PaymentStatus status;
 }

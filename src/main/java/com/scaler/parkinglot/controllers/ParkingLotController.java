@@ -29,12 +29,6 @@ public class ParkingLotController {
         return parkingLotService.create(parkingLot);
     }
 
-    private void validate(CreateParkingLotRequest request) {
-        if(request.getNumberOfFloors() == null) {
-            throw new InvalidNumberOfFloorsException();
-        }
-    }
-
     //Read
     // GET /api/v1/parking-lot/{id}
     @GetMapping("/{id}")
@@ -46,5 +40,11 @@ public class ParkingLotController {
 
     //Delete
     // DELETE /api/v1/parking-lot/{id}
+
+    private void validate(CreateParkingLotRequest request) {
+        if(request.getNumberOfFloors() == null) {
+            throw new InvalidNumberOfFloorsException();
+        }
+    }
 
 }

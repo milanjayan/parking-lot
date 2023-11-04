@@ -1,9 +1,11 @@
 package com.scaler.parkinglot.models;
 
 import lombok.Getter;
+import lombok.experimental.SuperBuilder;
 
 @Getter
-public class Vehicle {
+@SuperBuilder
+public class Vehicle extends BaseModel {
     private String number;
     private VehicleType type;
 }
